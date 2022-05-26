@@ -1,0 +1,13 @@
+@import '../../resources/styles/master.scss';
+
+nav {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  @media screen and (max-width: $big-tablet) {
+    height: 80px;
+    padding: 14px;
+  }
+}

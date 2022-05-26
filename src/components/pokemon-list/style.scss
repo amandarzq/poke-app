@@ -1,0 +1,12 @@
+
+.pokemon-list {
+  padding: 10px 20px;
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .skel-cont {
+    height: 100%;
+  width: 100%;
+  }
+}

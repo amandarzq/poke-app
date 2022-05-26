@@ -1,0 +1,116 @@
+@import '../../resources/styles/master.scss';
+
+.pokemon-detail {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  margin-top: 4rem;
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .detail-card {
+    width: 360px;
+    height: 400px;
+    background-color: rgb(20, 29, 65);
+    border-radius: 12px;
+    position: relative;
+    box-shadow: $deeper-shadow;
+    display: flex;
+    justify-content: center;
+    .pokemon-3d {
+      max-width: 300px;
+      height: 100%;
+      top: -60%;
+      position: absolute;
+      img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        animation: bounce infinite 3s linear;
+      }
+    }
+    .pokemon-info {
+      margin-top: 20%;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &_name {
+        font-size: 24px;
+        font-weight: $extrabold;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+      }
+      .dot {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        margin: 10px 7px;
+      }
+      .type-labels {
+        color: white;
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: $semibold;
+      }
+      &_details {
+        background-color: rgba(255, 255, 255, 0.221);
+        border-radius: 5px;
+        padding: 16px 20px;
+        color: white;
+        text-align: center;
+        width: 100%;
+        margin-top: 16px;
+        .row {
+          justify-content: space-around;
+        }
+        .value {
+          font-size: 24px;
+          font-weight: $semibold;
+        }
+        .key {
+          font-size: 14px;
+          font-weight: $normal;
+        }
+      }
+      &_stats {
+        @extend .pokemon-info_details;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .stats-item {
+          display: flex;
+          align-items: flex-end;
+        }
+        .label {
+          font-size: 10px;
+          text-transform: capitalize;
+        }
+        .value {
+          font-size: 16px;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $big-tablet) {
+    align-items: center;
+    margin-top: 14rem;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

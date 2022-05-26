@@ -1,0 +1,39 @@
+@import '../../resources/styles/master.scss';
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  .paging-btn {
+    cursor: pointer;
+    padding: 3px 10px;
+    border-radius: 7px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: $yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: rgb(41, 43, 31);
+    font-weight: $semibold;
+    box-shadow: $normal-shadow;
+    font-size: 14px;
+    color: rgb(108, 108, 108);
+    &.previous {
+      background-color: $blue;
+      color: white;
+    }
+    &:hover {
+      box-shadow: $deeper-shadow;
+    }
+    &.disable {
+      background-color: #cccccc;
+      cursor: default;
+      &:hover {
+        box-shadow: $normal-shadow;
+      }
+    }
+  }
+}
