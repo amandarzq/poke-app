@@ -4,7 +4,7 @@ const initialState = {
   nextUrl: '',
   previousUrl: '',
   loading: false,
-  error: ''
+  error: '',
 }
 
 export const pokemonReducer = (state = initialState, action) => {

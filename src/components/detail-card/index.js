@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { colours } from '../../constant';
 
 export const DetailCard = () => {
-  const { selectedPokemon, loading, error } = useSelector((state) => state)
+  const { selectedPokemon, loading } = useSelector((state) => state)
   const { height, name, sprites, weight, types, stats } = selectedPokemon
   const TYPES = types?.map(item => item?.type?.name)
 

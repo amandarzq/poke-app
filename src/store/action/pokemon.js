@@ -1,6 +1,6 @@
-import PokemonService from '../../services/pokemon'
+import PokemonService from '../../services/pokemon';
 
-const BASE_URL = 'https://pokeapi.co/api/v2/pokemon'
+const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
 
 export const changeAllPokemonData = (payload) => {
   return {

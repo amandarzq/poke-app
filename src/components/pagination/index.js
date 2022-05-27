@@ -3,7 +3,7 @@ import './style.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllPokemon } from '../../store/action/pokemon';
 
-export const Pagination = ({}) => {
+export const Pagination = () => {
   const dispatch = useDispatch()
   const { nextUrl, previousUrl } = useSelector((state) => state)
   
