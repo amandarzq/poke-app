@@ -1,19 +1,17 @@
-# Poke-App
+# Poke App
 
-Run $yarn then $yarn start to run app on your locals
+Poke-App is an app that shows you the list of existing pokemon characters.
+Upon opening the app, you will be able to see the list of your favorite pokemon characters on the left side of the screen, 
+and a selected character detail on the right of the screen. The character detail section will be placed above the pokemon list otherwise on mobile view.
+Below the list of characters, there will be a pagination button to navigate between pages.
+Clicking a pokemon card from the list will change character detail shown on the right side of the sreen.
+
+To run the app on your locals:
+Run `yarn` and then `yarn start` on your terminal.
 
 Some of the app features
-- Lists pokemon data that is integrated from 'https://pokeapi.co/' 
+- Lists pokemon data from 'https://pokeapi.co/' API
 - Pagination
-- Shows each character detail with clicking one of the pokemon card as trigger
+- Show and select character detail.
 - Search bar that allows user to search pokemon by name
 - Each card has a specific color according to the character's type
-
-
-Desktop preview
-
-<img width="1439" alt="image" src="https://user-images.githubusercontent.com/68003342/170602896-1e16eb1e-34d3-40d2-8c8b-ea5b2809d6b8.png">
-
-Mobile preview
-
-<img width="339" alt="image" src="https://user-images.githubusercontent.com/68003342/170603130-4feb1768-8e01-406b-a8be-b4cd3105b9fe.png">

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeSelectedPokemon } from '../../store/action/pokemon';
 import './style.scss';
 import { colours } from '../../constant';
-import PokemonBall from '../../resources/images/white_pokemonball.png'
+import PokemonBall from '../../resources/images/white_pokemonball.png';
 
 export const Card = ({ pokemon }) => {
   const dispatch = useDispatch()

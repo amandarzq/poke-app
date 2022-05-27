@@ -1,6 +1,6 @@
-import PokemonService from '../../services/pokemon'
+import PokemonService from '../../services/pokemon';
 
-const BASE_URL = 'https://pokeapi.co/api/v2/pokemon'
+const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
 
 export const changeAllPokemonData = (payload) => {
   return {
@@ -61,6 +61,7 @@ export const fetchAllPokemon = (url = BASE_URL) => {
 
 export const fetchOnePokemon = (pokemon, url = BASE_URL) => {
   return async (dispatch) => {
+    dispatch(changeError(""))
     try {
       const data = await PokemonService.getPokemonData(`${url}/${pokemon}`)
       dispatch(changeSelectedPokemon(data))

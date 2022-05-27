@@ -1,0 +1,19 @@
+.loading {
+  animation: up-down infinite 3s linear;
+  img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

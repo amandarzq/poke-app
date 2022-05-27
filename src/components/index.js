@@ -1,6 +1,7 @@
 export { Card } from './card';
-export { PokemonList } from './pokemon-list';
 export { DetailCard } from './detail-card';
+export { Loading } from './loading';
 export { Nav } from './nav';
 export { Pagination } from './pagination';
-export { SearchBar } from './search-bar'
+export { PokemonList } from './pokemon-list';
+export { SearchBar } from './search-bar';
