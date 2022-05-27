@@ -2,16 +2,11 @@ import React from 'react';
 import './style.scss';
 import { useSelector } from 'react-redux';
 import { colours } from '../../constant';
-import Skeleton from 'react-loading-skeleton';
 
 export const DetailCard = () => {
-  const { selectedPokemon, loading } = useSelector((state) => state)
+  const { selectedPokemon, loading, error } = useSelector((state) => state)
   const { height, name, sprites, weight, types, stats } = selectedPokemon
   const TYPES = types?.map(item => item?.type?.name)
-
-  if (loading) {
-    return <Skeleton width={'100px'} height={'100px'} />
-  }
 
   const KeyValueDetal = ({ label, value }) => {
     return (
@@ -22,14 +17,18 @@ export const DetailCard = () => {
     )
   }
 
+  if (loading) {
+    return null
+  }
+
   return (
     <div className='pokemon-detail'>
       <div className='detail-card'>
         <div className='pokemon-3d'>
-          <img src={sprites?.other?.home?.front_default} alt={name} />
+          <img src={sprites?.other?.home?.front_default} alt={name ? name : "_"} />
         </div>
         <div className='pokemon-info'>
-          <div className='pokemon-info_name'>{name}</div>
+          <div className='pokemon-info_name'>{name ? name : "_"}</div>
           <div className='row'>
             {
               TYPES?.map((item, idx) => {

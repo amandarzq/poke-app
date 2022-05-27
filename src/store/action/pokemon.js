@@ -61,6 +61,7 @@ export const fetchAllPokemon = (url = BASE_URL) => {
 
 export const fetchOnePokemon = (pokemon, url = BASE_URL) => {
   return async (dispatch) => {
+    dispatch(changeError(""))
     try {
       const data = await PokemonService.getPokemonData(`${url}/${pokemon}`)
       dispatch(changeSelectedPokemon(data))

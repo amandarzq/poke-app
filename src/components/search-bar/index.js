@@ -6,10 +6,18 @@ import { fetchOnePokemon } from '../../store/action/pokemon';
 export const SearchBar = () => {
   const dispatch = useDispatch()
   const [input, setInput] = useState('')
+  const [onSearching, setSearching] = useState(false)
 
-  const onEnterKey = (e) => {
-    if (e.key === 'Enter') {
-      dispatch(fetchOnePokemon(input.toLocaleLowerCase()))
+  const onEnterKey = async (e) => {
+    setSearching(true)
+    try {
+      if (e.key === 'Enter' && input) {
+        await dispatch(fetchOnePokemon(input.toLocaleLowerCase()))
+      }
+    } catch (err) {
+      setInput('')
+    } finally {
+      setSearching(false)
     }
   }
 
@@ -24,7 +32,7 @@ export const SearchBar = () => {
         onChange={(e) => setInput(e.target.value)} 
       />
       <div className='search-btn' onClick={() => onEnterKey({ key: 'Enter' })}>
-        search
+        {onSearching ? "searching..." : "search" }
       </div>
     </div>
   )
