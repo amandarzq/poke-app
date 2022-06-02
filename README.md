@@ -9,6 +9,8 @@ Clicking a pokemon card from the list will change character detail shown on the 
 To run the app on your locals:
 Run `yarn` and then `yarn start` on your terminal.
 
+Live: `https://pokemon-app-id.netlify.app/`
+
 Some of the app features
 - Lists pokemon data from 'https://pokeapi.co/' API
 - Pagination
